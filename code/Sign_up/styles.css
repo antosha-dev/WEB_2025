@@ -1,0 +1,490 @@
+.signup-container {
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  padding: 20px 70px 67px;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .signup-container {
+    padding: 100px 20px 67px;
+  }
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1232px;
+}
+
+@media (max-width: 991px) {
+  .content-wrapper {
+    max-width: 100%;
+  }
+}
+
+.layout-container {
+  gap: 20px;
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  .layout-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0px;
+  }
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  line-height: normal;
+  width: 43%;
+  margin-left: 0px;
+}
+
+@media (max-width: 991px) {
+  .left-column {
+    width: 100%;
+  }
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  line-height: normal;
+  width: 57%;
+  margin-left: 20px;
+}
+
+@media (max-width: 991px) {
+  .right-column {
+    width: 100%;
+  }
+}
+
+.signup-form {
+  flex-grow: 1;
+}
+
+@media (max-width: 991px) {
+  .signup-form {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+
+.form-header {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .form-header {
+    max-width: 100%;
+  }
+}
+
+.main-title {
+  color: --black;
+  font-family: TradeGothic LT Extended, -apple-system, Roboto, Helvetica,
+    sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--blackish-green);
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.75;
+  margin: 16px 0 0 0;
+}
+
+@media (max-width: 991px) {
+  .subtitle {
+    max-width: 100%;
+  }
+}
+
+.form-fields {
+  margin-top: 48px;
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .form-fields {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+
+.fields-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: start;
+}
+
+@media (max-width: 991px) {
+  .fields-container {
+    max-width: 100%;
+  }
+}
+
+.name-field-row {
+  display: flex;
+  width: 100%;
+  align-items: start;
+  gap: 24px;
+  font-family: var(--font-family);
+  color: #1c1b1f;
+  font-weight: 400;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+  .name-field-row {
+    max-width: 100%;
+  }
+}
+
+.input-group {
+  border-radius: 4px 4px 0px 0px;
+  min-width: 240px;
+  min-height: 56px;
+  flex: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  position: relative;
+}
+
+.input-field {
+  border-radius: 4px;
+  border: 1px solid #79747e;
+  width: 100%;
+  height: 60px;
+  background-color: var(--neutrals);
+  padding: 8px 16px;
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: #1c1b1f;
+  outline: none;
+  min-height: 40px;
+  box-sizing: border-box;
+}
+
+.input-label {
+  position: absolute;
+  z-index: 1;
+  padding: 0 4px;
+  font-size: 14px;
+  left: 12px;
+  top: -8px;
+  background-color: var(--neutrals);
+  color: var(--blackish-green);
+  font-family: var(--font-family);
+  font-weight: 400;
+}
+
+.field-row {
+  display: flex;
+  margin-top: 24px;
+  width: 100%;
+  align-items: start;
+  gap: 24px;
+  font-family: var(--font-family);
+  color: #1c1b1f;
+  font-weight: 400;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+  .field-row {
+    max-width: 100%;
+  }
+}
+
+.radios {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  margin-top: -10px;
+}
+
+.radios input {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-color: white;
+  accent-color: var(--mint-green);
+  background: transparent !important;
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.input-group {
+  border-radius: 4px 4px 0px 0px;
+  min-width: 240px;
+  min-height: 56px;
+  white-space: nowrap;
+  flex: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .input-group {
+    white-space: initial;
+  }
+}
+
+.password-input-group {
+  border-radius: 4px 4px 0px 0px;
+  margin-top: 24px;
+  min-height: 56px;
+  width: 100%;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .password-input-group {
+    max-width: 100%;
+  }
+}
+
+.password-field-container {
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(121, 116, 126, 1);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .password-field-container {
+    max-width: 100%;
+  }
+}
+
+.password-input {
+  border: none;
+  background: transparent;
+  padding: 12px 16px;
+  font-family: var(--font-family);
+  font-size: 16px;
+  height: 60px;
+  color: #1c1b1f;
+  outline: none;
+  flex: 1;
+  min-height: 40px;
+  box-sizing: border-box;
+}
+
+input:disabled {
+  background-color: lightgrey !important;
+  cursor: not-allowed !important;
+}
+
+button:disabled {
+  cursor: not-allowed !important;
+}
+
+.disabled {
+  cursor: not-allowed !important;
+  background-color: lightgray !important;
+}
+
+.password-toggle {
+  align-self: stretch;
+  display: flex;
+  min-height: 48px;
+  height: 60px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-icon-off {
+  position: absolute;
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 24px;
+}
+
+.toggle-icon-on {
+  position: absolute;
+  display: none;
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 24px;
+}
+
+.confirm-password-input-group {
+  border-radius: 4px 4px 0px 0px;
+  margin-top: 24px;
+  min-height: 56px;
+  width: 100%;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .confirm-password-input-group {
+    max-width: 100%;
+  }
+}
+
+.terms-agreement {
+  align-self: start;
+  display: flex;
+  margin-top: 24px;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-family);
+  font-size: 14px;
+  color: #112211;
+  font-weight: 500;
+  justify-content: start;
+}
+
+.checkbox-icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 24px;
+  accent-color: var(--mint-green);
+  align-self: stretch;
+  margin-top: auto;
+  margin-bottom: auto;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.terms-text {
+  align-self: stretch;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.terms-link {
+  font-weight: 600;
+  color: rgba(255, 134, 130, 1);
+  text-decoration: none;
+}
+
+.privacy-link {
+  font-weight: 600;
+  color: rgba(255, 134, 130, 1);
+  text-decoration: none;
+}
+
+.submit-section {
+  display: flex;
+  margin-top: 40px;
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  font-family: var(--font-family);
+  font-size: 14px;
+  justify-content: start;
+}
+
+@media (max-width: 991px) {
+  .submit-section {
+    max-width: 100%;
+  }
+}
+
+.create-account-btn {
+  width: 100%;
+  color: var(--blackish-green);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .create-account-btn {
+    max-width: 100%;
+  }
+}
+
+.regenerate-btn {
+  margin-top: 10px;
+  width: 40%;
+  max-width: 640px;
+  min-height: 48px;
+  color: var(--blackish-green);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background-color: var(--mint-green);
+}
+
+@media (max-width: 991px) {
+  .regenerate-btn {
+    max-width: 100%;
+  }
+}
+
+.btn-content {
+  color: var(--blackish-green);
+  align-self: stretch;
+  border-radius: 4px;
+  min-height: 48px;
+  width: 100%;
+  padding: 16px;
+  gap: 4px;
+  background-color: var(--mint-green);
+  border: none;
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .btn-content {
+    max-width: 100%;
+  }
+}
+
+.login-link-text {
+  color: #112211;
+  text-align: center;
+  font-weight: 500;
+  align-self: start;
+  margin-top: 16px;
+}
+
+@media (max-width: 991px) {
+  .login-link-text {
+    max-width: 100%;
+  }
+}
+
+.login-link {
+  font-weight: 600;
+  color: rgba(255, 134, 130, 1);
+  text-decoration: none;
+}

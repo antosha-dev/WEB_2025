@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="cart_titlе"></title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Global_styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/Header_and_Footer/styles.css" />
+    <link rel="stylesheet" href="/Preloader/preloader.css" />
+    <script>
+      localStorage.setItem("amount_of_pages", 0);
+    </script>
+  </head>
+  <body>
+    <div id="preloader" class="preloader">
+      <div class="spinner"></div>
+    </div>
+    <div class="flight-booking-container">
+      <header id="header"></header>
+      <main class="main-content">
+        <section class="results-section">
+          <div class="results-header">
+            <span id="results-count" class="results-count"></span>
+          </div>
+          <div id="flights-container" class="flight-cards"></div>
+        </section>
+        <div class="total">
+          <span data-i18n="cart_total">Total:</span>
+          <span id="total-price"></span>
+        </div>
+      </main>
+      <footer id="footer" class="footer"></footer>
+    </div>
+    <script src="/Preloader/preloader.js"></script>
+    <script type="module" src="/Header_and_Footer/header.js"></script>
+    <script type="module" src="/Header_and_Footer/footer.js"></script>
+    <script type="module" src="cart.js"></script>
+    <script
+      type="module"
+      src="/Header_and_Footer/language-switcher.js"
+    ></script>
+  </body>
+</html>

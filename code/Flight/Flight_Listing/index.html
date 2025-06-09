@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="flights_search_titlеt"></title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Global_styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/Header_and_Footer/styles.css" />
+    <link rel="stylesheet" href="/Preloader/preloader.css" />
+    <script>
+      localStorage.setItem("amount_of_pages", 0);
+    </script>
+  </head>
+  <body>
+    <div id="preloader" class="preloader">
+      <div class="spinner"></div>
+    </div>
+    <div class="flight-booking-container">
+      <header id="header"></header>
+      <section class="search-section">
+        <form class="flight-search-form">
+          <div class="search-field">
+            <div class="input-container">
+              <input
+                id="search-input"
+                type="text"
+                placeholder="EWR-BNA"
+                class="search-input"
+                value=""
+              />
+              <label
+                class="input-label"
+                data-i18n="flights_search_route_label"
+              ></label>
+            </div>
+          </div>
+
+          <button type="submit" class="search-button">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.4404 2.27344C14.9432 2.27367 18.6064 5.93758 18.6064 10.4404L18.6006 10.7695C18.5356 12.4158 17.9711 14.0066 16.9785 15.3281L16.9658 15.3447L16.9805 15.3584L21.3896 19.7676V19.7686C21.5607 19.9599 21.6625 20.202 21.6797 20.4561L21.6816 20.5654C21.6734 20.8588 21.5532 21.1382 21.3457 21.3457C21.1382 21.5532 20.8588 21.6734 20.5654 21.6816L20.4561 21.6797C20.2384 21.665 20.0293 21.5882 19.8535 21.459L19.7686 21.3896L15.3584 16.9805L15.3447 16.9658L15.3281 16.9785C13.9187 18.0371 12.2031 18.6083 10.4404 18.6064L10.0205 18.5957C5.71182 18.3766 2.27366 14.8025 2.27344 10.4404C2.27344 5.93744 5.93744 2.27344 10.4404 2.27344ZM11.5859 4.67969C10.5177 4.4672 9.41286 4.55621 8.39453 4.93457L8.19238 5.01367C7.11923 5.45819 6.20202 6.21097 5.55664 7.17676C4.91126 8.14264 4.56641 9.27877 4.56641 10.4404L4.57422 10.7314C4.64299 12.0856 5.17781 13.3748 6.08789 14.3799L6.28906 14.5908C7.32122 15.623 8.6975 16.2319 10.1484 16.3057L10.4404 16.3135C11.5294 16.3134 12.5957 16.011 13.5205 15.4414L13.7031 15.3232C14.6086 14.7182 15.3268 13.8742 15.7793 12.8867L15.8662 12.6875C16.283 11.6813 16.4117 10.5804 16.2393 9.50781L16.2002 9.29395C15.9735 8.15471 15.4141 7.10846 14.5928 6.28711C13.8228 5.51716 12.8554 4.97682 11.7988 4.72559L11.5859 4.67969Z"
+                fill="#112211"
+                stroke="#112211"
+                stroke-width="0.046875"
+              />
+            </svg>
+          </button>
+        </form>
+        <a
+          href="/Add_flight/index.html"
+          class="show-more-button"
+          data-i18n="flights_search_add_flight"
+          >Add flight</a
+        >
+      </section>
+      <main class="main-content">
+        <aside class="filters-sidebar">
+          <a href="/Add_flight/index.html"></a>
+          <h2
+            class="filters-title"
+            data-i18n="flights_search_filters_title"
+          ></h2>
+          <div class="filter-divider"></div>
+          <div class="filter-section">
+            <div class="filter-header">
+              <span
+                class="filter-label"
+                data-i18n="flights_search_rating_label"
+              ></span>
+            </div>
+            <div class="rating-radios">
+              <input
+                id="rating-radio-0"
+                name="rating"
+                type="radio"
+                class="rating-radio"
+                checked
+              />0+
+              <input
+                id="rating-radio-1"
+                name="rating"
+                type="radio"
+                class="rating-radio"
+              />1+
+              <input
+                id="rating-radio-2"
+                name="rating"
+                type="radio"
+                class="rating-radio"
+              />2+
+              <input
+                id="rating-radio-3"
+                name="rating"
+                type="radio"
+                class="rating-radio"
+              />3+
+              <input
+                id="rating-radio-4"
+                name="rating"
+                type="radio"
+                class="rating-radio"
+              />4+
+            </div>
+          </div>
+          <div class="filter-divider"></div>
+          <div class="filter-section">
+            <div class="filter-header">
+              <span
+                class="filter-label"
+                data-i18n="flights_search_airlines_label"
+              ></span>
+            </div>
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input
+                  id="airline-name-all"
+                  type="radio"
+                  class="checkbox"
+                  name="filter"
+                  checked
+                />
+                <span class="checkbox-label">All</span>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  id="airline-name-Emirates"
+                  type="radio"
+                  class="checkbox"
+                  name="filter"
+                />
+                <span class="checkbox-label">Emirated</span>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  id="airline-name-Fly_Dubai"
+                  type="radio"
+                  class="checkbox"
+                  name="filter"
+                />
+                <span class="checkbox-label">Fly Dubai</span>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  id="airline-name-Qatar"
+                  type="radio"
+                  class="checkbox"
+                  name="filter"
+                />
+                <span class="checkbox-label">Qatar</span>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  id="airline-name-Etihad"
+                  type="radio"
+                  class="checkbox"
+                  name="filter"
+                />
+                <span class="checkbox-label">Etihad</span>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  id="airline-name-Turkish_Airlines"
+                  type="radio"
+                  class="checkbox"
+                  name="filter"
+                />
+                <span class="checkbox-label">Turkish Airlines</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <section class="results-section">
+          <div class="sort-options">
+            <div class="sort-tabs">
+              <input
+                id="sort-by-cheapest"
+                type="radio"
+                name="sort"
+                class="sort-radio"
+              />
+              <label for="sort-by-cheapest">
+                <div class="sort-tab">
+                  <span
+                    class="tab-title"
+                    data-i18n="flights_search_sort_cheapest"
+                  ></span>
+                </div>
+              </label>
+              <div class="tab-divider"></div>
+              <input
+                id="sort-by-best"
+                type="radio"
+                name="sort"
+                class="sort-radio"
+              />
+              <label for="sort-by-best">
+                <div class="sort-tab">
+                  <span
+                    class="tab-title"
+                    data-i18n="flights_search_sort_best"
+                  ></span>
+                </div>
+              </label>
+              <div class="tab-divider"></div>
+              <input
+                id="sort-by-quickest"
+                type="radio"
+                name="sort"
+                class="sort-radio"
+              />
+              <label for="sort-by-quickest">
+                <div class="sort-tab">
+                  <span
+                    class="tab-title"
+                    data-i18n="flights_search_sort_quickest"
+                  ></span>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="results-header">
+            <span id="results-count" class="results-count"></span>
+            <div class="sort-dropdown">
+              <span class="sort-text">
+                <span data-i18n="flights_search_sort_by"></span>
+                <strong id="type-of-sort">recomended</strong>
+              </span>
+            </div>
+          </div>
+          <div id="flights-container" class="flight-cards"></div>
+          <button
+            id="show-more-button"
+            class="show-more-button"
+            onclick="FlightCatalogController.showMoreFlights()"
+            data-i18n="flights_search_show_more"
+          ></button>
+        </section>
+      </main>
+      <footer id="footer" class="footer"></footer>
+    </div>
+    <script src="/Preloader/preloader.js"></script>
+    <script type="module" src="/Header_and_Footer/header.js"></script>
+    <script type="module" src="/Header_and_Footer/footer.js"></script>
+    <script type="module" src="catalog.js"></script>
+    <script
+      type="module"
+      src="/Header_and_Footer/language-switcher.js"
+    ></script>
+  </body>
+</html>

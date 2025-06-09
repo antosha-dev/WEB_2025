@@ -1,0 +1,727 @@
+{
+  "Flights": [
+    {
+      "airline": "Emirates",
+      "rating": 4.8,
+      "reviews": "Excellent 92 reviews",
+      "price": 580,
+      "flights": [
+        {
+          "departure": "12:00 pm",
+          "arrival": "01:28 pm",
+          "type": "non stop",
+          "duration": "2h 28m",
+          "route": "EWR-BNA"
+        }
+      ],
+      "id": "8cbe"
+    },
+    {
+      "airline": "Fly Dubai",
+      "rating": 3.5,
+      "reviews": "Good 32 reviews",
+      "price": 90,
+      "flights": [
+        {
+          "departure": "12:00 pm",
+          "arrival": "01:28 pm",
+          "type": "non stop",
+          "duration": "2h 28m",
+          "route": "EWR-BNA"
+        }
+      ],
+      "id": "e8d5"
+    },
+    {
+      "airline": "Qatar Airways",
+      "rating": 4.2,
+      "reviews": "Very Good 60 reviews",
+      "price": 320,
+      "flights": [
+        {
+          "departure": "12:00 pm",
+          "arrival": "01:28 pm",
+          "type": "non stop",
+          "duration": "2h 28m",
+          "route": "EWR-BNA"
+        }
+      ],
+      "id": "f16c"
+    },
+    {
+      "airline": "Etihad",
+      "rating": 3.8,
+      "reviews": "Good 45 reviews",
+      "price": 200,
+      "flights": [
+        {
+          "departure": "12:00 pm",
+          "arrival": "01:28 pm",
+          "type": "non stop",
+          "duration": "2h 28m",
+          "route": "EWR-BNA"
+        }
+      ],
+      "id": "e9a9"
+    },
+    {
+      "airline": "Qatar Airways",
+      "rating": 4,
+      "reviews": "Good 50 reviews",
+      "price": 350,
+      "flights": [
+        {
+          "departure": "12:00 pm",
+          "arrival": "01:28 pm",
+          "type": "non stop",
+          "duration": "2h 28m",
+          "route": "EWR-BNA"
+        }
+      ],
+      "id": "97da"
+    },
+    {
+      "airline": "Etihad",
+      "rating": 3.7,
+      "reviews": "Good 40 reviews",
+      "price": 180,
+      "flights": [
+        {
+          "departure": "12:00 pm",
+          "arrival": "01:28 pm",
+          "type": "non stop",
+          "duration": "2h 28m",
+          "route": "EWR-BNA"
+        }
+      ],
+      "id": "1805"
+    },
+    {
+      "airline": "Emirates",
+      "rating": 4.9,
+      "reviews": "Excellent 95 reviews",
+      "price": 550,
+      "flights": [
+        {
+          "departure": "09:00 am",
+          "arrival": "11:30 am",
+          "type": "non stop",
+          "duration": "2h 30m",
+          "route": "JFK-LAX"
+        }
+      ],
+      "id": "0593"
+    },
+    {
+      "airline": "Fly Dubai",
+      "rating": 2.5,
+      "reviews": "Average 25 reviews",
+      "price": 70,
+      "flights": [
+        {
+          "departure": "02:00 pm",
+          "arrival": "04:45 pm",
+          "type": "non stop",
+          "duration": "2h 45m",
+          "route": "EWR-MIA"
+        }
+      ],
+      "id": "f9e4"
+    },
+    {
+      "airline": "Turkish Airlines",
+      "rating": 4.1,
+      "reviews": "Very Good 55 reviews",
+      "price": 400,
+      "flights": [
+        {
+          "departure": "06:00 pm",
+          "arrival": "08:00 am",
+          "type": "1 stop",
+          "duration": "14h 00m",
+          "route": "JFK-IST"
+        }
+      ],
+      "id": "6494"
+    },
+    {
+      "airline": "Qatar Airways",
+      "rating": 4.5,
+      "reviews": "Excellent 75 reviews",
+      "price": 500,
+      "flights": [
+        {
+          "departure": "11:00 am",
+          "arrival": "07:00 pm",
+          "type": "1 stop",
+          "duration": "8h 00m",
+          "route": "EWR-DOH"
+        }
+      ],
+      "id": "3b97"
+    },
+    {
+      "airline": "Etihad",
+      "rating": 3.9,
+      "reviews": "Good 48 reviews",
+      "price": 250,
+      "flights": [
+        {
+          "departure": "08:00 am",
+          "arrival": "03:00 pm",
+          "type": "1 stop",
+          "duration": "7h 00m",
+          "route": "JFK-AUH"
+        }
+      ],
+      "id": "acf8"
+    },
+    {
+      "airline": "Emirates",
+      "rating": 5,
+      "reviews": "Excellent 100 reviews",
+      "price": 600,
+      "flights": [
+        {
+          "departure": "01:00 pm",
+          "arrival": "09:00 pm",
+          "type": "1 stop",
+          "duration": "8h 00m",
+          "route": "LAX-DXB"
+        }
+      ],
+      "id": "a797"
+    },
+    {
+      "airline": "Fly Dubai",
+      "rating": 2.8,
+      "reviews": "Average 30 reviews",
+      "price": 80,
+      "flights": [
+        {
+          "departure": "03:00 pm",
+          "arrival": "05:30 pm",
+          "type": "non stop",
+          "duration": "2h 30m",
+          "route": "MIA-ORD"
+        }
+      ],
+      "id": "c717"
+    },
+    {
+      "airline": "Turkish Airlines",
+      "rating": 4,
+      "reviews": "Good 50 reviews",
+      "price": 420,
+      "flights": [
+        {
+          "departure": "07:00 pm",
+          "arrival": "11:00 am",
+          "type": "1 stop",
+          "duration": "16h 00m",
+          "route": "SFO-IST"
+        }
+      ],
+      "id": "458e"
+    },
+    {
+      "airline": "Qatar Airways",
+      "rating": 4.3,
+      "reviews": "Very Good 65 reviews",
+      "price": 480,
+      "flights": [
+        {
+          "departure": "10:00 am",
+          "arrival": "06:00 pm",
+          "type": "1 stop",
+          "duration": "8h 00m",
+          "route": "ORD-DOH"
+        }
+      ],
+      "id": "c2d1"
+    },
+    {
+      "airline": "Etihad",
+      "rating": 3.6,
+      "reviews": "Good 38 reviews",
+      "price": 220,
+      "flights": [
+        {
+          "departure": "09:00 am",
+          "arrival": "04:00 pm",
+          "type": "1 stop",
+          "duration": "7h 00m",
+          "route": "LAX-AUH"
+        }
+      ],
+      "id": "3066"
+    },
+    {
+      "airline": "Emirates",
+      "rating": 4.7,
+      "reviews": "Excellent 88 reviews",
+      "price": 570,
+      "flights": [
+        {
+          "departure": "02:00 pm",
+          "arrival": "10:00 pm",
+          "type": "1 stop",
+          "duration": "8h 00m",
+          "route": "SFO-DXB"
+        }
+      ],
+      "id": "3b27"
+    },
+    {
+      "airline": "Fly Dubai",
+      "rating": 3,
+      "reviews": "Average 28 reviews",
+      "price": 85,
+      "flights": [
+        {
+          "departure": "04:00 pm",
+          "arrival": "06:30 pm",
+          "type": "non stop",
+          "duration": "2h 30m",
+          "route": "ORD-DFW"
+        }
+      ],
+      "id": "976f"
+    },
+    {
+      "airline": "Turkish Airlines",
+      "rating": 4.2,
+      "reviews": "Very Good 58 reviews",
+      "price": 430,
+      "flights": [
+        {
+          "departure": "08:00 pm",
+          "arrival": "12:00 pm",
+          "type": "1 stop",
+          "duration": "16h 00m",
+          "route": "LAX-IST"
+        }
+      ],
+      "id": "4a65"
+    },
+    {
+      "airline": "Qatar Airways",
+      "rating": 4.4,
+      "reviews": "Very Good 68 reviews",
+      "price": 490,
+      "flights": [
+        {
+          "departure": "11:00 am",
+          "arrival": "07:00 pm",
+          "type": "1 stop",
+          "duration": "8h 00m",
+          "route": "DFW-DOH"
+        }
+      ],
+      "id": "044e"
+    },
+    {
+      "airline": "Etihad",
+      "rating": 3.8,
+      "reviews": "Good 42 reviews",
+      "price": 230,
+      "flights": [
+        {
+          "departure": "10:00 am",
+          "arrival": "05:00 pm",
+          "type": "1 stop",
+          "duration": "7h 00m",
+          "route": "SFO-AUH"
+        }
+      ],
+      "id": "c4ad"
+    },
+    {
+      "airline": "Emirates",
+      "rating": 4.9,
+      "reviews": "Excellent 93 reviews",
+      "price": 590,
+      "flights": [
+        {
+          "departure": "03:00 pm",
+          "arrival": "11:00 pm",
+          "type": "1 stop",
+          "duration": "8h 00m",
+          "route": "DFW-DXB"
+        }
+      ],
+      "id": "fa95"
+    },
+    {
+      "airline": "Fly Dubai",
+      "rating": 2.7,
+      "reviews": "Average 22 reviews",
+      "price": 75,
+      "flights": [
+        {
+          "departure": "05:00 pm",
+          "arrival": "07:30 pm",
+          "type": "non stop",
+          "duration": "2h 30m",
+          "route": "LAX-SEA"
+        }
+      ],
+      "id": "a96b"
+    },
+    {
+      "airline": "Turkish Airlines",
+      "rating": 4,
+      "reviews": "Good 50 reviews",
+      "price": 410,
+      "flights": [
+        {
+          "departure": "09:00 pm",
+          "arrival": "01:00 pm",
+          "type": "1 stop",
+          "duration": "16h 00m",
+          "route": "SEA-IST"
+        }
+      ],
+      "id": "7c2d"
+    },
+    {
+      "airline": "Qatar Airways",
+      "rating": 4.6,
+      "reviews": "Excellent 80 reviews",
+      "price": 510,
+      "flights": [
+        {
+          "departure": "12:00 pm",
+          "arrival": "08:00 pm",
+          "type": "1 stop",
+          "duration": "8h 00m",
+          "route": "SEA-DOH"
+        }
+      ],
+      "id": "88b3"
+    },
+    {
+      "airline": "Etihad",
+      "rating": 3.9,
+      "reviews": "Good 46 reviews",
+      "price": 240,
+      "flights": [
+        {
+          "departure": "11:00 am",
+          "arrival": "06:00 pm",
+          "type": "1 stop",
+          "duration": "7h 00m",
+          "route": "SEA-AUH"
+        }
+      ],
+      "id": "c537"
+    },
+    {
+      "airline": "Emirates",
+      "rating": 4.8,
+      "reviews": "Excellent 90 reviews",
+      "price": 580,
+      "flights": [
+        {
+          "departure": "04:00 pm",
+          "arrival": "12:00 am",
+          "type": "1 stop",
+          "duration": "8h 00m",
+          "route": "SEA-DXB"
+        }
+      ],
+      "id": "2394"
+    },
+    {
+      "airline": "Fly Dubai",
+      "rating": 2.9,
+      "reviews": "Average 26 reviews",
+      "price": 80,
+      "flights": [
+        {
+          "departure": "06:00 pm",
+          "arrival": "08:30 pm",
+          "type": "non stop",
+          "duration": "2h 30m",
+          "route": "DEN-PHX"
+        }
+      ],
+      "id": "4266"
+    },
+    {
+      "airline": "Turkish Airlines",
+      "rating": 4.3,
+      "reviews": "Very Good 62 reviews",
+      "price": 450,
+      "flights": [
+        {
+          "departure": "10:00 pm",
+          "arrival": "02:00 pm",
+          "type": "1 stop",
+          "duration": "16h 00m",
+          "route": "DEN-IST"
+        }
+      ],
+      "id": "171e"
+    },
+    {
+      "airline": "Qatar Airways",
+      "rating": 4.5,
+      "reviews": "Excellent 78 reviews",
+      "price": 520,
+      "flights": [
+        {
+          "departure": "01:00 pm",
+          "arrival": "09:00 pm",
+          "type": "1 stop",
+          "duration": "8h 00m",
+          "route": "DEN-DOH"
+        }
+      ],
+      "id": "2948"
+    },
+    {
+      "airline": "Etihad",
+      "rating": 3.7,
+      "reviews": "Good 40 reviews",
+      "price": 210,
+      "flights": [
+        {
+          "departure": "12:00 pm",
+          "arrival": "07:00 pm",
+          "type": "1 stop",
+          "duration": "7h 00m",
+          "route": "DEN-AUH"
+        }
+      ],
+      "id": "066c"
+    },
+    {
+      "airline": "Emirates",
+      "rating": 4.9,
+      "reviews": "Excellent 95 reviews",
+      "price": 600,
+      "flights": [
+        {
+          "departure": "05:00 pm",
+          "arrival": "01:00 am",
+          "type": "1 stop",
+          "duration": "8h 00m",
+          "route": "DEN-DXB"
+        }
+      ],
+      "id": "13ea"
+    },
+    {
+      "airline": "Fly Dubai",
+      "rating": 2.6,
+      "reviews": "Average 20 reviews",
+      "price": 70,
+      "flights": [
+        {
+          "departure": "07:00 pm",
+          "arrival": "09:30 pm",
+          "type": "non stop",
+          "duration": "2h 30m",
+          "route": "PHX-LAS"
+        }
+      ],
+      "id": "47de"
+    },
+    {
+      "airline": "Turkish Airlines",
+      "rating": 4.1,
+      "reviews": "Very Good 56 reviews",
+      "price": 460,
+      "flights": [
+        {
+          "departure": "11:00 pm",
+          "arrival": "03:00 pm",
+          "type": "1 stop",
+          "duration": "16h 00m",
+          "route": "LAS-IST"
+        }
+      ],
+      "id": "a618"
+    },
+    {
+      "airline": "Qatar Airways",
+      "rating": 4.4,
+      "reviews": "Very Good 70 reviews",
+      "price": 530,
+      "flights": [
+        {
+          "departure": "02:00 pm",
+          "arrival": "10:00 pm",
+          "type": "1 stop",
+          "duration": "8h 00m",
+          "route": "LAS-DOH"
+        }
+      ],
+      "id": "bcd2"
+    },
+    {
+      "airline": "Etihad",
+      "rating": 3.8,
+      "reviews": "Good 44 reviews",
+      "price": 220,
+      "flights": [
+        {
+          "departure": "01:00 pm",
+          "arrival": "08:00 pm",
+          "type": "1 stop",
+          "duration": "7h 00m",
+          "route": "LAS-AUH"
+        }
+      ],
+      "id": "0673"
+    },
+    {
+      "airline": "Emirates",
+      "rating": 5,
+      "reviews": "Excellent 98 reviews",
+      "price": 590,
+      "flights": [
+        {
+          "departure": "06:00 pm",
+          "arrival": "02:00 am",
+          "type": "1 stop",
+          "duration": "8h 00m",
+          "route": "LAS-DXB"
+        }
+      ],
+      "id": "5a8f"
+    },
+    {
+      "id": "b16b",
+      "airline": "Airbus",
+      "rating": 4.6,
+      "reviews": "Very Good 86 reviews",
+      "price": 10,
+      "flights": [
+        {
+          "departure": "01:00 pm",
+          "arrival": "01:00 am",
+          "type": "non stop",
+          "duration": "12h 0m",
+          "route": "BYN-BYN"
+        }
+      ]
+    }
+  ],
+  "Users": [
+    {
+      "id": "7442",
+      "username": "JohnDoe",
+      "password": "Test1234",
+      "phone": "911",
+      "email": "test@test.test",
+      "birthdate": "2000-12-12",
+      "fullname": "John Doe"
+    },
+    {
+      "id": "a6ad",
+      "username": "GloomyBloop84",
+      "password": "Ur2$gkRjFn2v",
+      "phone": "+375295464382",
+      "email": "antonio266727@gamil.com",
+      "birthdate": "2000-12-12",
+      "fullname": "Ad Ad"
+    },
+    {
+      "id": "48a5",
+      "username": "admin1",
+      "password": "A1234567890b%",
+      "phone": "+375295464382",
+      "email": "tereshkov.antosha@yandex.ru",
+      "birthdate": "2000-12-12",
+      "fullname": "Ad Ad",
+      "cart": []
+    },
+    {
+      "id": "2950",
+      "username": "admin2",
+      "password": "A1234567890b%",
+      "phone": "+375295464382",
+      "email": "john.doe@gmail.com",
+      "birthdate": "1950-01-15",
+      "fullname": "Заборонок Дмитрий",
+      "cart": []
+    }
+  ],
+  "Cart": [
+    {
+      "id": "4e3f",
+      "airline": "Airbus",
+      "rating": 4.6,
+      "reviews": "Very Good 86 reviews",
+      "price": 10,
+      "flights": [
+        {
+          "departure": "01:00 pm",
+          "arrival": "01:00 am",
+          "type": "non stop",
+          "duration": "12h 0m",
+          "route": "BYN-BYN"
+        }
+      ],
+      "flightId": "b16b",
+      "userName": "admin1"
+    },
+    {
+      "id": "8cbf",
+      "airline": "Fly Dubai",
+      "rating": 2.7,
+      "reviews": "Average 22 reviews",
+      "price": 75,
+      "flights": [
+        {
+          "departure": "05:00 pm",
+          "arrival": "07:30 pm",
+          "type": "non stop",
+          "duration": "2h 30m",
+          "route": "LAX-SEA"
+        }
+      ],
+      "flightId": "a96b",
+      "userName": "admin1"
+    },
+    {
+      "id": "9044",
+      "airline": "Emirates",
+      "rating": 4.8,
+      "reviews": "Excellent 92 reviews",
+      "price": 580,
+      "flights": [
+        {
+          "departure": "12:00 pm",
+          "arrival": "01:28 pm",
+          "type": "non stop",
+          "duration": "2h 28m",
+          "route": "EWR-BNA"
+        }
+      ],
+      "flightId": "8cbe",
+      "userName": "admin1"
+    },
+    {
+      "id": "6aba",
+      "airline": "Emirates",
+      "rating": 4.9,
+      "reviews": "Excellent 95 reviews",
+      "price": 600,
+      "flights": [
+        {
+          "departure": "05:00 pm",
+          "arrival": "01:00 am",
+          "type": "1 stop",
+          "duration": "8h 00m",
+          "route": "DEN-DXB"
+        }
+      ],
+      "flightId": "13ea",
+      "userName": "admin1"
+    }
+  ],
+  "Mailing_list": []
+}

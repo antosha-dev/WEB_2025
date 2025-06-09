@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Golobe</title>
+    <link rel="stylesheet" href="/Global_styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/Header_and_Footer/styles.css" />
+    <link rel="stylesheet" href="/Preloader/preloader.css" />
+  </head>
+  <body>
+    <div id="preloader" class="preloader">
+      <div class="spinner"></div>
+    </div>
+    <header id="header"></header>
+    <main class="about-page">
+      <section class="about-section">
+        <h1 class="section-title" data-i18n="about_title">About Golobe</h1>
+        <p class="section-subtitle" data-i18n="about_subtitle">
+          Discover our story and passion for creating unforgettable travel
+          experiences.
+        </p>
+        <div class="about-content">
+          <div class="about-text">
+            <p data-i18n="about_text_1">
+              Golobe is a leading travel agency dedicated to crafting
+              personalized and memorable travel experiences. Founded in 2010,
+              our mission is to inspire and enable travelers to explore the
+              world with ease and confidence. With a team of passionate travel
+              experts, we offer tailored itineraries, seamless booking services,
+              and 24/7 support to ensure every journey is extraordinary.
+            </p>
+            <p data-i18n="about_text_2">
+              Our headquarters are located in the heart of Moscow, Russia, where
+              we operate our flagship office. We partner with top airlines,
+              hotels, and local guides worldwide to provide exclusive deals and
+              authentic experiences. Whether you're seeking a relaxing beach
+              getaway, an adventurous trek, or a cultural city tour, Golobe is
+              here to make your travel dreams a reality.
+            </p>
+            <p data-i18n="about_text_3">
+              At Golobe, we believe travel is more than just visiting new
+              places—it's about creating connections, embracing new cultures,
+              and making lifelong memories. Join us on your next adventure!
+            </p>
+          </div>
+          <div class="about-map" id="map"></div>
+        </div>
+      </section>
+      <footer id="footer" class="footer"></footer>
+    </main>
+    <script src="/Preloader/preloader.js"></script>
+    <script type="module" src="/Header_and_Footer/header.js"></script>
+    <script type="module" src="/Header_and_Footer/footer.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=en_US&apikey=your-api-key"></script>
+    <script>
+      ymaps.ready(init);
+      function init() {
+        var myMap = new ymaps.Map("map", {
+          center: [6.435645, 3.481265],
+          zoom: 15,
+        });
+        var myPlacemark = new ymaps.Placemark([6.435645, 3.481265], {
+          hintContent: "Golobe Travel Agency",
+          balloonContent: "Golobe Travel Agency",
+        });
+        myMap.geoObjects.add(myPlacemark);
+      }
+    </script>
+    <script
+      type="module"
+      src="/Header_and_Footer/language-switcher.js"
+    ></script>
+  </body>
+</html>

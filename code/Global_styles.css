@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/Fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "TradeGothic LT Extended";
+  src: url("/Fonts/Trade-Gothic-LT-Extended.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --font-family: "Montserrat", sans-serif;
+  --second-family: "TradeGothic LT Extended", sans-serif;
+
+  font-family: var(--font-family);
+}
+
+:root {
+  --blackish-green: #121;
+  --mint-green: #8dd3bb;
+  --light-mint-green: #d1f0e5;
+  --slamon: #ff8682;
+  --neutrals: #fff;
+  --black: #171717;
+}
+
+[data-theme="dark"] {
+  --blackish-green: #fff;
+  --mint-green: #669a88;
+  --light-mint-green: #93c0af;
+  --slamon: #ff8682;
+  --neutrals: #171717;
+  --black: #fff;
+}
+
+[data-theme="dark"] .invert {
+  filter: invert(100%) !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: none;
+}
