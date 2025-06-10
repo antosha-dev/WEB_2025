@@ -38,6 +38,49 @@
 [data-theme="dark"] .invert {
   filter: invert(100%) !important;
 }
+[data-theme="accessibility"] {
+  --neutrals: #ffffff;
+  --black: #000000;
+  --blackish-green: #000000;
+  --banner-bg-accessibility: #f5f5f5;
+}
+
+[data-theme="accessibility"][data-color-scheme="black-white"] {
+  --neutrals: #ffffff;
+  --black: #333333;
+  --blackish-green: #333333;
+  --banner-bg-accessibility: #cccccc;
+}
+
+[data-theme="accessibility"][data-color-scheme="white-black"] {
+  --neutrals: #333333;
+  --black: #ffffff;
+  --blackish-green: #ffffff;
+  --banner-bg-accessibility: #4a4a4a;
+}
+
+[data-theme="accessibility"][data-color-scheme="black-green"] {
+  --neutrals: #333333;
+  --black: #98fb98;
+  --blackish-green: #98fb98;
+  --mint-green: #333333;
+  --light-mint-green: #686868;
+  --banner-bg-accessibility: #2f4f2f;
+}
+
+[data-theme="accessibility"][data-color-scheme="beige-brown"] {
+  --neutrals: #f5f0e1;
+  --black: #4a2c07;
+  --blackish-green: #4a2c07;
+  --banner-bg-accessibility: #d9c2a6;
+}
+
+[data-theme="accessibility"][data-color-scheme="blue-lightblue"] {
+  --neutrals: #add8e6;
+  --black: #0e0e52;
+  --blackish-green: #0e0e52;
+  --banner-bg-accessibility: #4682b4;
+}
 
 a {
   text-decoration: none;

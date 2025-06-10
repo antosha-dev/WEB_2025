@@ -113,8 +113,17 @@ export function applyVisibility() {
   }
 }
 export function applyTheme(theme) {
+  console.log(
+    `data-theme: ${document.documentElement.getAttribute("data-theme")}`
+  );
+  console.log(
+    `data-color-scheme: ${document.documentElement.getAttribute(
+      "data-color-scheme"
+    )}`
+  );
   if (theme) {
     localStorage.setItem("currentTheme", theme);
+    document.documentElement.setAttribute("data-theme", theme);
   } else {
     let currentTheme = document.documentElement.getAttribute("data-theme");
     document.documentElement.setAttribute(
@@ -145,18 +154,21 @@ export function updateThemeInput() {
     });
   }
 }
+
 function applyAccessibilitySettings() {
   console.log("Применение настроек доступности");
   console.log(localStorage.getItem("data-theme"));
   console.log(localStorage.getItem("data-color-scheme"));
   const fontSize = localStorage.getItem("accessibilityFontSize") || "small";
   const colorScheme =
-    localStorage.getItem("accessibilityColorScheme") || "white-black";
+    localStorage.getItem("data-color-scheme") || "white-black";
   const images = localStorage.getItem("accessibilityImages") || "on";
 
   document.documentElement.setAttribute("data-font-size", fontSize);
   document.documentElement.setAttribute("data-color-scheme", colorScheme);
   document.documentElement.setAttribute("data-images", images);
+
+  applyTheme("accessibility");
 
   const allImages = document.querySelectorAll(
     "img:not(.brand_icon):not(.restart-toggle img):not(.visibility-toggle img):not(.theme-toggle img):not(.settings-toggle img):not(.cart-icon-wrapper img):not(.social-icons img)"
@@ -196,6 +208,7 @@ setTimeout(() => {
   initializeVisibilityCheckbox();
   initializeSettingsToggle();
 }, 1000);
+
 function showAccessibilityPanel() {
   console.log("Показ панели доступности");
   let panel = document.querySelector(".accessibility-panel");
@@ -304,7 +317,7 @@ function showAccessibilityPanel() {
 
   // Apply Settings
   panel.querySelector(".apply-settings").addEventListener("click", () => {
-    localStorage.setItem("accessibilityColorScheme", tempColorScheme);
+    localStorage.setItem("data-color-scheme", tempColorScheme);
     localStorage.setItem("accessibilityImages", tempImages);
     applyAccessibilitySettings();
     panel.style.display = "none";
@@ -318,6 +331,7 @@ function showAccessibilityPanel() {
   panel.style.display = "block";
   applyLanguage(lang, "showAccessibilityPanel");
 }
+
 function initializeVisibilityCheckbox(attempt = 0, maxAttempts = 10) {
   console.log(`Инициализация visibilityCheckbox, попытка ${attempt + 1}`);
   const visibilityCheckbox = document.getElementById("visibility");
@@ -344,6 +358,9 @@ function initializeVisibilityCheckbox(attempt = 0, maxAttempts = 10) {
       applyVisibility();
       if (visibility === "accessibility") {
         showAccessibilityPanel();
+      }
+      if (!this.checked) {
+        document.querySelector(".accessibility-panel").style.display = "none";
       }
     });
   } else if (attempt < maxAttempts) {

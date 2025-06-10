@@ -149,5 +149,3 @@ function initFooterSubscription() {
     });
   }
 }
-
-// Function to apply translations
