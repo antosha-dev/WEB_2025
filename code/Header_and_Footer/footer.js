@@ -1,4 +1,4 @@
-fetch("/Header_and_Footer/footer.html")
+fetch("/code/Header_and_Footer/footer.html")
   .then((response) => response.text())
   .then((data) => {
     document.getElementById("footer").innerHTML = data;

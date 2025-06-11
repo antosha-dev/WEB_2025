@@ -1,4 +1,4 @@
-import { translations } from "/Header_and_Footer/translations.js";
+import { translations } from "/code/Header_and_Footer/translations.js";
 
 let isApplyingLanguage = false;
 

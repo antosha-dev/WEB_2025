@@ -59,15 +59,11 @@ document.getElementById("apply-btn").addEventListener("click", async () => {
     rating,
     reviews,
     price,
-    flights: [
-      {
-        departure,
-        arrival,
-        type,
-        duration,
-        route,
-      },
-    ],
+    departure,
+    arrival,
+    type,
+    duration,
+    route,
   };
 
   try {

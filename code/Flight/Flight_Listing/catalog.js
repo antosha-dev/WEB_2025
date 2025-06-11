@@ -170,25 +170,21 @@ class FlightRenderer {
             </div>
             <div class="flight-info">
               <div class="flight-segments">
-                ${flight.flights
-                  .map(
-                    (f) => `
                   <div class="flight-segment">
                     <div class="segment-time">
                       <div class="time-range">
-                        <span class="time">${f.departure} - ${f.arrival}</span>
+                        <span class="time">${flight.departure} - ${
+        flight.arrival
+      }</span>
                       </div>
                       <span class="airline-name">${flight.airline}</span>
                     </div>
-                    <span class="flight-type">${f.type}</span>
+                    <span class="flight-type">${flight.type}</span>
                     <div class="duration-info">
                       <span class="flight-duration">${f.duration}</span>
-                      <span class="route-code">${f.route}</span>
+                      <span class="route-code">${flight.route}</span>
                     </div>
                   </div>
-                `
-                  )
-                  .join("\n")}
               </div>
             </div>
             <div class="flight-actions">

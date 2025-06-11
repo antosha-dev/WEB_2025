@@ -1,6 +1,6 @@
 let currentUser = null;
 const themeButton = document.getElementById("theme-button");
-import { updateThemeInput } from "/Header_and_Footer/language-switcher.js";
+import { updateThemeInput } from "/code/Header_and_Footer/language-switcher.js";
 
 function checkAuth() {
   const user = localStorage.getItem("currentUser");
@@ -28,7 +28,7 @@ function updateHeader(isLoggedIn) {
     with_user.style.display = "flex";
     if (isAdmin) {
       const profile = document.getElementById("user-avatar");
-      profile.src = "/Header_and_Footer/assets/admin.png";
+      profile.src = "/code/Header_and_Footer/assets/admin.png";
     }
   } else {
     logOutBtn.removeEventListener("click", handleLogout);
@@ -44,7 +44,7 @@ function handleLogout(e) {
   updateHeader(false);
 }
 
-await fetch("/Header_and_Footer/header.html")
+await fetch("/code/Header_and_Footer/header.html")
   .then((response) => response.text())
   .then((data) => {
     document.getElementById("header").innerHTML = data;

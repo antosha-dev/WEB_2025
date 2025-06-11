@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Montserrat";
-  src: url("/Fonts/Montserrat-Regular.ttf");
+  src: url("/code/Fonts/Montserrat-Regular.ttf");
 }
 @font-face {
   font-family: "TradeGothic LT Extended";
-  src: url("/Fonts/Trade-Gothic-LT-Extended.ttf");
+  src: url("/code/Fonts/Trade-Gothic-LT-Extended.ttf");
 }
 
 * {
