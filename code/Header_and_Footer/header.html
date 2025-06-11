@@ -78,56 +78,58 @@
           </defs>
         </svg>
       </a>
-      <div class="burger-menu">
+      <nav class="burger-menu">
         <img
           src="/code/Header_and_Footer/assets/burger-menu.svg"
           alt="burger-menu"
         />
-      </div>
+      </nav>
       <div class="auth-buttons">
-        <button class="restart-toggle">
-          <img
-            src="/code/Header_and_Footer/assets/restart-header.svg"
-            alt="Restart"
-          />
-        </button>
-        <div>
-          <input type="checkbox" id="visibility" class="visibility-wrapper" />
-          <label for="visibility" class="visibility-toggle">
+        <div class="control-btns">
+          <button class="restart-toggle">
             <img
-              src="/code/Header_and_Footer/assets/visibility_off.png"
-              alt="Visibility Off"
-              class="visibility-off invert"
+              src="/code/Header_and_Footer/assets/restart-header.svg"
+              alt="Restart"
             />
+          </button>
+          <div>
+            <input type="checkbox" id="visibility" class="visibility-wrapper" />
+            <label for="visibility" class="visibility-toggle">
+              <img
+                src="/code/Header_and_Footer/assets/visibility_off.png"
+                alt="Visibility Off"
+                class="visibility-off invert"
+              />
+              <img
+                src="/code/Header_and_Footer/assets/visibility.png"
+                alt="Visibility On"
+                class="visibility-on invert"
+              />
+            </label>
+          </div>
+          <input id="language-toggle" type="checkbox" class="language-button" />
+          <label for="language-toggle" class="language">
             <img
-              src="/code/Header_and_Footer/assets/visibility.png"
-              alt="Visibility On"
-              class="visibility-on invert"
+              src="/code/Header_and_Footer/assets/language.png"
+              alt="language changer"
+              class="language-toggle invert"
+            />
+            <span
+              style="color: var(--black)"
+              id="selected-language"
+              data-i18n="header_selected_language"
+              >en</span
+            >
+          </label>
+          <input id="theme-toggle" type="checkbox" class="theme-button" />
+          <label for="theme-toggle" class="theme-toggle">
+            <img
+              src="/code/Header_and_Footer/assets/theme.svg"
+              alt="theme button"
+              class="theme-toggle invert"
             />
           </label>
         </div>
-        <input id="language-toggle" type="checkbox" class="language-button" />
-        <label for="language-toggle">
-          <img
-            src="/code/Header_and_Footer/assets/language.png"
-            alt="language changer"
-            class="language-toggle invert"
-          />
-          <span
-            style="color: var(--black)"
-            id="selected-language"
-            data-i18n="header_selected_language"
-            >en</span
-          >
-        </label>
-        <input id="theme-toggle" type="checkbox" class="theme-button" />
-        <label for="theme-toggle" class="theme-toggle">
-          <img
-            src="/code/Header_and_Footer/assets/theme.svg"
-            alt="theme button"
-            class="theme-toggle invert"
-          />
-        </label>
         <div id="no-user" class="no-user">
           <a
             href="/code/Log_in/index.html"

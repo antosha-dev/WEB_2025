@@ -17,7 +17,6 @@
   flex-wrap: wrap;
   align-items: center;
   margin: auto 0;
-  min-width: 15rem;
   color: var(--black);
 }
 
@@ -27,7 +26,6 @@
   align-items: flex-start;
   align-self: stretch;
   margin: auto 0;
-  min-width: 15rem;
 }
 
 .nav-item {
@@ -55,7 +53,6 @@
   display: flex;
   flex-shrink: 0;
   align-self: stretch;
-  justify-content: space-between;
   height: 2.25rem;
   width: 6.875rem;
 }
@@ -89,16 +86,26 @@
 .auth-buttons {
   display: flex;
   z-index: 0;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
   margin: auto 0;
 }
 
 .burger-menu {
   display: none;
+  cursor: pointer;
 }
 
-@media (max-width: 868px) {
+.control-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 1rem;
+  align-self: center;
+}
+
+@media (max-width: 1000px) {
   .auth-buttons {
     display: none;
   }
@@ -108,20 +115,52 @@
   .burger-menu {
     display: flex;
   }
+  .shopping-text {
+    display: none;
+  }
+  .with-user {
+    gap: 0.5rem !important;
+  }
+  #header.active .auth-buttons {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 10px;
+    top: 3.75rem;
+    right: 0;
+    width: 100%;
+    background-color: var(--neutrals);
+    box-shadow: 0 4px 8px var(--black);
+    z-index: 1000;
+  }
+
+  .header-nav {
+    width: 100%;
+  }
 }
 
 .login-button {
+  width: 80px;
+  min-height: 3rem;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
   align-self: stretch;
   margin: auto 0;
+  text-align: center;
+  margin: auto 0;
   color: var(--black);
-  background: none;
-  border: none;
+  background: var(--neutrals);
   cursor: pointer;
   font-size: 0.875rem;
   font-weight: 600;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
 }
 
 .signup-button {
+  width: 100%;
   display: flex;
   overflow: hidden;
   flex-direction: column;
@@ -523,7 +562,7 @@
 .no-user {
   display: flex;
   z-index: 0;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
   margin: auto 0;
 }

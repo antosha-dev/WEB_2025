@@ -55,6 +55,7 @@ await fetch("/code/Header_and_Footer/header.html")
     document.dispatchEvent(new CustomEvent("headerLoaded"));
   })
   .catch((error) => console.error("Ошибка загрузки header:", error));
+  initBurgerMenu();
 
 /*fetch("/Header_and_Footer/index.html")
   .then((response) => response.text())
@@ -81,9 +82,9 @@ await fetch("/code/Header_and_Footer/header.html")
   .catch((error) => console.error("Ошибка загрузки хедера/футера:", error));*/
 
 function initBurgerMenu() {
-  //const hamMenu = document.querySelector('.ham-menu');
-  const header = document.querySelector(".header");
-  //const links = document.querySelectorAll('.links a');
+  const hamMenu = document.querySelector('.burger-menu');
+  const header = document.getElementById("header");
+  const links = document.querySelectorAll('.links a');
   //const buttonCart = document.querySelector('.button-cart');
 
   /*if (!hamMenu || !header || !buttonCart) {
@@ -94,14 +95,8 @@ function initBurgerMenu() {
   hamMenu.addEventListener("click", () => {
     hamMenu.classList.toggle("active");
     header.classList.toggle("active");
-
-    if (window.innerWidth <= 768) {
-      buttonCart.classList.toggle("active");
-    } else {
-      buttonCart.classList.remove("active");
-    }
   });
-
+/*
   links.forEach((link) => {
     link.addEventListener("click", () => {
       hamMenu.classList.remove("active");
@@ -135,7 +130,7 @@ function initBurgerMenu() {
     } else if (header.classList.contains("active")) {
       buttonCart.classList.add("active");
     }
-  });
+  });*/
 }
 
 function initFooterSubscription() {

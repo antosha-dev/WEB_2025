@@ -90,11 +90,6 @@ class FilterSettingsManager {
       );
     }
 
-    /*if (settings.airlines.length > 0) {
-      const normalizedAirlines = settings.airlines.map(airline => AIRLINE_NAME_MAPPING[airline] || airline);
-      params.append("airline", normalizedAirlines.join('&'));
-    }*/
-
     switch (settings.sortBy) {
       case "cheapest":
         params.append("_sort", "price");
@@ -378,16 +373,16 @@ function deleteFlight(flightId) {
     throw new Error("Failed, get admin permission");
   }
 
-  fetch(`http://localhost:3000/products/${flightId}`)
+  fetch(`http://localhost:3000/Flights/${flightId}`)
     .then((response) => {
-      if (!response.ok) throw new Error("Failed to load product");
+      if (!response.ok) throw new Error("Failed to load flights");
       return response.json();
     })
     .then(() => {
       showModal("catalog_page.modal.delete_confirm", true, flightId);
     })
     .catch((error) => {
-      console.error("Error checking product for deletion:", error);
+      console.error("Error checking flights for deletion:", error);
       showModal("catalog_page.modal.delete_error");
     });
 }
@@ -418,7 +413,7 @@ function confirmDelete() {
     })
     .then((purchasedItems) => {
       const deletePurchasedPromises = purchasedItems.map((item) =>
-        fetch(`http://localhost:3000/purchased/${item.id}`, {
+        fetch(`http://localhost:3000/Flights/${item.id}`, {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },
         })
@@ -426,18 +421,18 @@ function confirmDelete() {
       return Promise.all(deletePurchasedPromises);
     })
     .then(() => {
-      return fetch(`http://localhost:3000/products/${pendingDeleteProductId}`, {
+      return fetch(`http://localhost:3000/Flights/${pendingDeleteProductId}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
       });
     })
     .then((response) => {
-      if (!response.ok) throw new Error("Failed to delete product");
+      if (!response.ok) throw new Error("Failed to delete Flights");
       closeModal();
       fetchProducts();
     })
     .catch((error) => {
-      console.error("Error deleting product:", error);
+      console.error("Error deleting Flights:", error);
       closeModal();
       showModal("catalog_page.modal.delete_error");
     });
