@@ -26,7 +26,7 @@ document
       if (users.length == 1 && users[0].password === password) {
         localStorage.setItem("currentUser", users[0].username);
 
-        window.location.href = "/Flight/Flight_Listing/index.html";
+        window.location.href = "/code/Flight/Flight_Listing/index.html";
       } else {
         nameInput.style.borderColor = "red";
         passwordInput.style.borderColor = "red";

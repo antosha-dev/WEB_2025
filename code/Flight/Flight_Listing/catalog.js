@@ -181,7 +181,7 @@ class FlightRenderer {
                     </div>
                     <span class="flight-type">${flight.type}</span>
                     <div class="duration-info">
-                      <span class="flight-duration">${f.duration}</span>
+                      <span class="flight-duration">${flight.duration}</span>
                       <span class="route-code">${flight.route}</span>
                     </div>
                   </div>

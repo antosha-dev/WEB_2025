@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!postResponse.ok) throw new Error("Registration failed");
 
       localStorage.setItem("currentUser", `${user.username}`);
-      window.location.assign("/Flight/Flight_Listing/index.html");
+      window.location.assign("/code/Flight/Flight_Listing/index.html");
     } catch (error) {
       console.error("Error registering user:", error);
       setError(form, "register_page.form.server_error");
