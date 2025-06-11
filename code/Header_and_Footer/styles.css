@@ -268,7 +268,7 @@
   color: var(--black);
 }
 
-.email-field .content {
+.email-field .foot-content {
   position: static !important;
   width: 100%;
   min-width: 15rem;
@@ -278,7 +278,7 @@
   font-size: 14px;
 }
 
-.subscribe-button .style-layer {
+.subscribe-button .footer-style-layer {
   flex: 1;
   gap: 0.25rem;
   align-self: stretch;
@@ -612,14 +612,6 @@
   font-size: 1rem;
 }
 
-[data-theme="accessibility"][data-font-size="medium"] .control-group label {
-  font-size: 1.25rem;
-}
-
-[data-theme="accessibility"][data-font-size="large"] .control-group label {
-  font-size: 1.5rem;
-}
-
 [data-theme="accessibility"] .button-group {
   display: flex;
   flex-wrap: wrap;
@@ -639,21 +631,6 @@
   font-size: 1rem;
 }
 
-[data-theme="accessibility"][data-font-size="medium"]
-  .accessibility-controls
-  button {
-  padding: 0.625rem 0.9375rem;
-  min-width: 7.5rem;
-  font-size: 1.25rem;
-}
-
-[data-theme="accessibility"][data-font-size="large"]
-  .accessibility-controls
-  button {
-  padding: 0.75rem 1.125rem;
-  min-width: 9rem;
-  font-size: 1.5rem;
-}
 
 .accessibility-controls button.active,
 .accessibility-controls button:hover {
@@ -698,21 +675,6 @@
     font-size: 0.875rem;
   }
 
-  [data-theme="accessibility"][data-font-size="medium"]
-    .accessibility-controls
-    button {
-    padding: 0.375rem 0.625rem;
-    min-width: 5rem;
-    font-size: 1.09375rem;
-  }
-
-  [data-theme="accessibility"][data-font-size="large"]
-    .accessibility-controls
-    button {
-    padding: 0.45rem 0.75rem;
-    min-width: 6rem;
-    font-size: 1.3125rem;
-  }
 
   [data-theme="accessibility"] .lang .eng,
   [data-theme="accessibility"] .lang .rus {
@@ -720,22 +682,6 @@
     height: 18px;
     line-height: 18px;
     font-size: 0.875rem;
-  }
-
-  [data-theme="accessibility"][data-font-size="medium"] .lang .eng,
-  [data-theme="accessibility"][data-font-size="medium"] .lang .rus {
-    width: 30px;
-    height: 22.5px;
-    line-height: 22.5px;
-    font-size: 1.09375rem;
-  }
-
-  [data-theme="accessibility"][data-font-size="large"] .lang .eng,
-  [data-theme="accessibility"][data-font-size="large"] .lang .rus {
-    width: 36px;
-    height: 27px;
-    line-height: 27px;
-    font-size: 1.3125rem;
   }
 }
 .visibility-toggle {

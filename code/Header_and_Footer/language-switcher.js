@@ -89,7 +89,7 @@ export function applyVisibility() {
   const visibility = localStorage.getItem("visibility") || "visible";
   const isHomePage = document.body.getAttribute("data-page") === "home";
 
-  if (visibility === "accessibility") {
+  if (visibility === "accessibility" && isHomePage) {
     applyTheme("accessibility");
     applyAccessibilitySettings();
   } else {
@@ -171,7 +171,7 @@ function applyAccessibilitySettings() {
   applyTheme("accessibility");
 
   const allImages = document.querySelectorAll(
-    "img:not(.brand_icon):not(.restart-toggle img):not(.visibility-toggle img):not(.theme-toggle img):not(.settings-toggle img):not(.cart-icon-wrapper img):not(.social-icons img)"
+    "img:not(.language-toggle):not(.restart-toggle img):not(.visibility-toggle img):not(.theme-toggle img):not(.settings-toggle img):not(.cart-icon-wrapper img):not(.logo)"
   );
   const lang = localStorage.getItem("language") || "en";
   const t = getTranslations(lang);
@@ -216,48 +216,6 @@ function showAccessibilityPanel() {
   const lang = localStorage.getItem("language") || "en";
   const t = getTranslations(lang);
 
-  if (panel) {
-    panel.remove();
-  }
-
-  panel = document.createElement("div");
-  panel.className = "accessibility-panel";
-  panel.innerHTML = `
-        <div class="accessibility-controls">
-            <h3 data-i18n="accessibility.panelTitle">Accessibility Settings</h3>
-            <div class="control-group font-size-control">
-                <label data-i18n="accessibility.fontSize">Font Size</label>
-                <div class="button-group">
-                    <button class="font-size-button" data-font-size="small" data-i18n="accessibility.fontSizeSmall">Small</button>
-                    <button class="font-size-button" data-font-size="medium" data-i18n="accessibility.fontSizeMedium">Medium</button>
-                    <button class="font-size-button" data-font-size="large" data-i18n="accessibility.fontSizeLarge">Large</button>
-                </div>
-            </div>
-            <div class="control-group color-scheme-control">
-                <label data-i18n="accessibility.colorScheme">Color Scheme</label>
-                <div class="button-group">
-                    <button data-color-scheme="black-white" data-i18n="accessibility.colorSchemeBlackWhite">Black on White</button>
-                    <button data-color-scheme="white-black" data-i18n="accessibility.colorSchemeWhiteBlack">White on Black</button>
-                    <button data-color-scheme="black-green" data-i18n="accessibility.colorSchemeBlackGreen">Green on Black</button>
-                    <button data-color-scheme="beige-brown" data-i18n="accessibility.colorSchemeBeigeBrown">Brown on Beige</button>
-                    <button data-color-scheme="blue-lightblue" data-i18n="accessibility.colorSchemeBlueLightblue">Black on Light Blue</button>
-                </div>
-            </div>
-            <div class="control-group images-control">
-                <label data-i18n="accessibility.images">Images</label>
-                <div class="button-group">
-                    <button data-images="on" data-i18n="accessibility.imagesOn">On</button>
-                    <button data-images="off" data-i18n="accessibility.imagesOff">Off</button>
-                </div>
-            </div>
-            <div class="action-buttons">
-                <button class="apply-settings" data-i18n="accessibility.apply">Apply</button>
-                <button class="close-settings" data-i18n="accessibility.close">Close</button>
-            </div>
-        </div>
-    `;
-  document.body.appendChild(panel);
-
   const currentFontSize =
     localStorage.getItem("accessibilityFontSize") || "small";
   const currentColorScheme =
@@ -276,7 +234,6 @@ function showAccessibilityPanel() {
     );
     btn.addEventListener("click", () => {
       tempFontSize = btn.getAttribute("data-font-size");
-      applyFontSize(tempFontSize);
       panel
         .querySelectorAll(".font-size-button")
         .forEach((b) => b.classList.remove("active"));
@@ -319,6 +276,7 @@ function showAccessibilityPanel() {
   panel.querySelector(".apply-settings").addEventListener("click", () => {
     localStorage.setItem("data-color-scheme", tempColorScheme);
     localStorage.setItem("accessibilityImages", tempImages);
+    applyFontSize(tempFontSize);
     applyAccessibilitySettings();
     panel.style.display = "none";
   });
@@ -348,7 +306,7 @@ function initializeVisibilityCheckbox(attempt = 0, maxAttempts = 10) {
     newVisibilityCheckbox.addEventListener("change", function () {
       const isHomePage = document.body.getAttribute("data-page") === "home";
       if (this.checked && !isHomePage) {
-        console.log("Режим доступности доступен только на главной странице");
+        window.alert("Режим доступности доступен только на главной странице");
         this.checked = false;
         return;
       }
@@ -361,6 +319,12 @@ function initializeVisibilityCheckbox(attempt = 0, maxAttempts = 10) {
       }
       if (!this.checked) {
         document.querySelector(".accessibility-panel").style.display = "none";
+        const allImages = document.querySelectorAll(
+          "img:not(.language-toggle):not(.restart-toggle img):not(.visibility-toggle img):not(.theme-toggle img):not(.settings-toggle img):not(.cart-icon-wrapper img):not(.logo)"
+        );
+        allImages.forEach((img) => {
+          img.style.display = "block";
+        });
       }
     });
   } else if (attempt < maxAttempts) {

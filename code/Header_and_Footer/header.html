@@ -81,7 +81,10 @@
         </svg>
       </a>
       <div class="burger-menu">
-        <img src="/code/Header_and_Footer/assets/burger-menu.svg" alt="burger-menu">
+        <img
+          src="/code/Header_and_Footer/assets/burger-menu.svg"
+          alt="burger-menu"
+        />
       </div>
       <div class="auth-buttons">
         <button class="restart-toggle">
@@ -179,76 +182,87 @@
       <!-- Панель доступности -->
       <div id="accessibility-panel" class="accessibility-panel">
         <div class="accessibility-controls">
-          <h3 data-i18n="accessibility.panelTitle">Accessibility Settings</h3>
-          <div class="font-size-control">
-            <label data-i18n="accessibility.fontSize">Font Size</label>
-            <button
-              data-font-size="small"
-              data-i18n="accessibility.fontSizeSmall"
-            >
-              Small
+          <h3 data-i18n="accessibility_panelTitle">Accessibility Settings</h3>
+          <div class="control-group font-size-control">
+            <label data-i18n="accessibility_fontSize">Font Size</label>
+            <div class="button-group">
+              <button
+                class="font-size-button"
+                data-font-size="small"
+                data-i18n="accessibility_fontSizeSmall"
+              >
+                Small
+              </button>
+              <button
+                class="font-size-button"
+                data-font-size="medium"
+                data-i18n="accessibility_fontSizeMedium"
+              >
+                Medium
+              </button>
+              <button
+                class="font-size-button"
+                data-font-size="large"
+                data-i18n="accessibility_fontSizeLarge"
+              >
+                Large
+              </button>
+            </div>
+          </div>
+          <div class="control-group color-scheme-control">
+            <label data-i18n="accessibility_colorScheme">Color Scheme</label>
+            <div class="button-group">
+              <button
+                data-color-scheme="black-white"
+                data-i18n="accessibility_colorSchemeBlackWhite"
+              >
+                Black on White
+              </button>
+              <button
+                data-color-scheme="white-black"
+                data-i18n="accessibility_colorSchemeWhiteBlack"
+              >
+                White on Black
+              </button>
+              <button
+                data-color-scheme="black-green"
+                data-i18n="accessibility_colorSchemeBlackGreen"
+              >
+                Green on Black
+              </button>
+              <button
+                data-color-scheme="beige-brown"
+                data-i18n="accessibility_colorSchemeBeigeBrown"
+              >
+                Brown on Beige
+              </button>
+              <button
+                data-color-scheme="blue-lightblue"
+                data-i18n="accessibility_colorSchemeBlueLightblue"
+              >
+                Black on Light Blue
+              </button>
+            </div>
+          </div>
+          <div class="control-group images-control">
+            <label data-i18n="accessibility_images">Images</label>
+            <div class="button-group">
+              <button data-images="on" data-i18n="accessibility_imagesOn">
+                On
+              </button>
+              <button data-images="off" data-i18n="accessibility_imagesOff">
+                Off
+              </button>
+            </div>
+          </div>
+          <div class="action-buttons">
+            <button class="apply-settings" data-i18n="accessibility_apply">
+              Apply
             </button>
-            <button
-              data-font-size="medium"
-              data-i18n="accessibility.fontSizeMedium"
-            >
-              Medium
-            </button>
-            <button
-              data-font-size="large"
-              data-i18n="accessibility.fontSizeLarge"
-            >
-              Large
+            <button class="close-settings" data-i18n="accessibility_close">
+              Close
             </button>
           </div>
-          <div class="color-scheme-control">
-            <label data-i18n="accessibility.colorScheme">Color Scheme</label>
-            <button
-              data-color-scheme="black-white"
-              data-i18n="accessibility.colorSchemeBlackWhite"
-            >
-              Black on White
-            </button>
-            <button
-              data-color-scheme="black-green"
-              data-i18n="accessibility.colorSchemeBlackGreen"
-            >
-              Green on Black
-            </button>
-            <button
-              data-color-scheme="white-black"
-              data-i18n="accessibility.colorSchemeWhiteBlack"
-            >
-              White on Black
-            </button>
-            <button
-              data-color-scheme="beige-brown"
-              data-i18n="accessibility.colorSchemeBeigeBrown"
-            >
-              Brown on Beige
-            </button>
-            <button
-              data-color-scheme="blue-lightblue"
-              data-i18n="accessibility.colorSchemeBlueLightBlue"
-            >
-              Black on Light Blue
-            </button>
-          </div>
-          <div class="images-control">
-            <label data-i18n="accessibility.images">Images</label>
-            <button data-images="on" data-i18n="accessibility.imagesOn">
-              On
-            </button>
-            <button data-images="off" data-i18n="accessibility.imagesOff">
-              Off
-            </button>
-          </div>
-          <button class="apply-settings" data-i18n="accessibility.apply">
-            Apply
-          </button>
-          <button class="close-settings" data-i18n="accessibility.close">
-            Close
-          </button>
         </div>
       </div>
     </header>

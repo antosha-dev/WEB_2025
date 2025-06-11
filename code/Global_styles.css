@@ -26,6 +26,16 @@
   --black: #171717;
 }
 
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: none;
+}
+
 [data-theme="dark"] {
   --blackish-green: #fff;
   --mint-green: #669a88;
@@ -82,12 +92,14 @@
   --banner-bg-accessibility: #4682b4;
 }
 
-a {
-  text-decoration: none;
+[data-theme="accessibility"]{
+  font-size: 16px !important;
 }
 
-button {
-  outline: none;
-  border: none;
-  background: none;
+[data-theme="accessibility"][data-font-size="medium"]{
+  font-size: 20px !important;
+}
+
+[data-theme="accessibility"][data-font-size="large"]{
+  font-size: 24px !important;
 }
