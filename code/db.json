@@ -443,18 +443,6 @@
       "duration": "8h 00m",
       "route": "LAS-DXB",
       "id": "5a8f"
-    },
-    {
-      "id": "b16b",
-      "airline": "Airbus",
-      "rating": 4.6,
-      "reviews": "Very Good 86 reviews",
-      "price": 10,
-      "departure": "01:00 pm",
-      "arrival": "01:00 am",
-      "type": "non stop",
-      "duration": "12h 0m",
-      "route": "BYN-BYN"
     }
   ],
   "Users": [

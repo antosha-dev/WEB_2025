@@ -389,7 +389,7 @@ function deleteFlight(flightId) {
           }
         );
         const deleteFlight = fetch(
-          `http://localhost:3000/Flights?id=${flightId}`,
+          `http://localhost:3000/Flights/${flightId}`,
           {
             method: "DELETE",
             headers: { "Content-Type": "application/json" },
