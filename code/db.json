@@ -551,15 +551,6 @@
       "route": "DEN-DXB",
       "flightId": "13ea",
       "userName": "admin1"
-    },
-    {
-      "id": "9d10",
-      "airline": "Qatar Airways",
-      "rating": 4.6,
-      "reviews": "Excellent 80 reviews",
-      "price": 510,
-      "flightId": "88b3",
-      "userName": "admin1"
     }
   ],
   "Mailing_list": []

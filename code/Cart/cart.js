@@ -143,7 +143,7 @@ await FlightCatalogController.loadFlights();
 const total_price = document.getElementById("total-price");
 let total = 0;
 document.querySelectorAll("#price-amount").forEach((el) => {
-  total = parseInt(el.innerHTML.replace("$", ""));
+  total += parseInt(el.innerHTML.replace("$", ""));
   console.log(total);
 });
 total_price.innerHTML = `${total}$`;
