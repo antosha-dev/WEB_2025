@@ -475,6 +475,7 @@ body {
   z-index: 0;
   max-width: 100%;
   width: 248px;
+  height: 120px;
 }
 
 .destination-info {
@@ -506,6 +507,7 @@ body {
 }
 
 .book-flight-button {
+  display: flex;
   margin-top: 1rem;
   width: 100%;
   font-size: 0.875rem;

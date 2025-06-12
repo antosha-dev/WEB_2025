@@ -26,7 +26,7 @@ body {
 }
 
 .night-off {
-  filter: invert(100%)
+  filter: invert(100%);
 }
 
 [data-theme="dark"] .night-off {
@@ -830,4 +830,11 @@ body {
   width: 100%;
   border-radius: 0.5rem;
   aspect-ratio: 1.88/1;
+}
+
+.rainbow:hover {
+  color: var(--neutrals);
+  background: linear-gradient(45deg, red, orange, yellow, blue, violet, red);
+  background-size: 400%;
+  animation: rainbow 20s ease infinite;
 }

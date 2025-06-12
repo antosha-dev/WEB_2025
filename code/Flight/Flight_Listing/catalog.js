@@ -7,6 +7,7 @@ const AIRLINE_NAME_MAPPING = {
 };
 
 let currentUser = localStorage.getItem("currentUser");
+const isAdmin = (currentUser ? currentUser : "").includes("admin");
 
 if (!checkAuth()) {
   window.location.href = "/Log_in/index.html";
@@ -78,7 +79,7 @@ class FilterSettingsManager {
   static buildQueryParams(settings) {
     const params = new URLSearchParams();
     if (settings.searchQuery)
-      params.append("flights.route", settings.searchQuery);
+      params.append("route", settings.searchQuery);
     if (settings.rating) {
       const minRating = parseInt(settings.rating) || 0;
       params.append("rating_gte", minRating);
@@ -186,7 +187,7 @@ class FlightRenderer {
               <button id="add-to-cart-btn" class="view-deals-button ${
                 flight.id
               }">Add to cart</button>
-              <button id="delete-btn" class="delete-button">
+              <button id="delete-btn" class="delete-button ${flight.id}">
               <img src="assets/delete.png" alt="delete">
               </button>
             </div>
@@ -369,7 +370,7 @@ async function addToCart(flightId) {
 }
 
 function deleteFlight(flightId) {
-  if (!isAdmin()) {
+  if (!isAdmin) {
     throw new Error("Failed, get admin permission");
   }
 
@@ -379,105 +380,35 @@ function deleteFlight(flightId) {
       return response.json();
     })
     .then(() => {
-      showModal("catalog_page.modal.delete_confirm", true, flightId);
+      if (window.confirm(`Confirm deleting flight with id: ${flightId}`)) {
+        const cartItems = fetch(
+          `http://localhost:3000/Cart?flightId=${flightId}`,
+          {
+            method: "DELETE",
+            headers: { "Content-Type": "application/json" },
+          }
+        );
+        const deleteFlight = fetch(
+          `http://localhost:3000/Flights?id=${flightId}`,
+          {
+            method: "DELETE",
+            headers: { "Content-Type": "application/json" },
+          }
+        );
+      }
     })
     .catch((error) => {
-      console.error("Error checking flights for deletion:", error);
-      showModal("catalog_page.modal.delete_error");
+      console.error(error);
     });
-}
-
-function confirmDelete() {
-  if (!pendingDeleteProductId) return;
-
-  fetch(`http://localhost:3000/Cart?flightId=${pendingDeleteProductId}`)
-    .then((response) => {
-      if (!response.ok) throw new Error("Failed to load cart");
-      return response.json();
-    })
-    .then((cartItems) => {
-      const deleteCartPromises = cartItems.map((item) =>
-        fetch(`http://localhost:3000/Cart?id=${item.id}`, {
-          method: "DELETE",
-          headers: { "Content-Type": "application/json" },
-        })
-      );
-      return Promise.all(deleteCartPromises);
-    })
-    .then(() => {
-      return fetch(`http://localhost:3000/Flight?Id=${pendingDeleteProductId}`);
-    })
-    .then((response) => {
-      if (!response.ok) throw new Error("Failed to load purchased items");
-      return response.json();
-    })
-    .then((purchasedItems) => {
-      const deletePurchasedPromises = purchasedItems.map((item) =>
-        fetch(`http://localhost:3000/Flights/${item.id}`, {
-          method: "DELETE",
-          headers: { "Content-Type": "application/json" },
-        })
-      );
-      return Promise.all(deletePurchasedPromises);
-    })
-    .then(() => {
-      return fetch(`http://localhost:3000/Flights/${pendingDeleteProductId}`, {
-        method: "DELETE",
-        headers: { "Content-Type": "application/json" },
-      });
-    })
-    .then((response) => {
-      if (!response.ok) throw new Error("Failed to delete Flights");
-      closeModal();
-      fetchProducts();
-    })
-    .catch((error) => {
-      console.error("Error deleting Flights:", error);
-      closeModal();
-      showModal("catalog_page.modal.delete_error");
-    });
-}
-
-function showModal(messageKey, isConfirm = false, productId = null) {
-  const t = getCurrentTranslations();
-  const modal = document.getElementById("delete-modal");
-  const modalMessage = document.getElementById("modal-message");
-  const confirmButton = document.getElementById("modal-confirm");
-  const cancelButton = document.getElementById("modal-cancel");
-
-  if (!modal || !modalMessage || !cancelButton) {
-    console.error("Modal elements not found");
-    return;
-  }
-
-  let message = messageKey;
-  try {
-    const keys = messageKey.split(".");
-    let translation = t;
-    for (const key of keys) {
-      translation = translation[key];
-      if (!translation) throw new Error("Translation not found");
-    }
-    message = translation;
-  } catch (e) {
-    console.warn(`Translation not found`, e);
-  }
-
-  modalMessage.textContent = message;
-  confirmButton.style.display = isConfirm ? "block" : "none";
-  cancelButton.textContent = isConfirm
-    ? t.catalog_page.modal.cancel || "Cancel"
-    : t.catalog_page.modal.close || "Close";
-  pendingDeleteProductId = isConfirm ? productId : null;
-
-  modal.style.display = "flex";
 }
 
 setTimeout(() => {
-  const buttons = document.querySelectorAll("#delete-btn");
+  const buttons = document.querySelectorAll(".delete-button");
+  //const buttons = document.getElementById("delete-btn");
+  console.log(buttons);
   buttons.forEach((el) => {
     el.addEventListener("click", (e) => {
-      deleteFlight(addToCartBtn.classList[1]);
+      deleteFlight(el.classList[1]);
     });
   });
-}, 100);
+}, 1000);
