@@ -553,5 +553,10 @@
       "userName": "admin1"
     }
   ],
-  "Mailing_list": []
+  "Mailing_list": [
+    {
+      "id": "0b8a",
+      "email": "tereshkov@gmail.com"
+    }
+  ]
 }

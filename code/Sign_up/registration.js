@@ -256,23 +256,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /*agreementLink.addEventListener("click", (e) => {
-    e.preventDefault();
-    agreementModal.style.display = "flex";
-  });
-
-  closeModal.addEventListener("click", () => {
-    agreementModal.style.display = "";
-  });
-
-  agreementAcceptBtn.addEventListener("click", () => {
-    agreementCheckbox.disabled = false;
-    agreementCheckbox.checked = true;
-    agreementAcceptBtn.disabled = true;
-    agreementModal.style.display = "";
-    validateForm();
-  });*/
-
   [
     phoneInput,
     emailInput,
