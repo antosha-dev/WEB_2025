@@ -59,7 +59,7 @@ class FlightRenderer {
   static renderFlights(flights) {
     const container = document.getElementById("flights-container");
     container.innerHTML = "";
-    if(flights.flights.length==0){
+    if (flights.flights.length == 0) {
       window.alert("No flights in cart :(");
     }
     for (let i = 0; i < flights.flights.length; i++) {
@@ -82,9 +82,7 @@ class FlightRenderer {
               </div>
               <div class="price-section">
                 <span class="price-label" data-i18n="catalog_starting_from">starting from</span>
-                <span id="price-amount" class="price-amount">${
-                  flight.price
-                }$</span>
+                <span class="price-amount">${flight.price}$</span>
               </div>
             </div>
             <div class="flight-info">
@@ -92,7 +90,9 @@ class FlightRenderer {
                   <div class="flight-segment">
                     <div class="segment-time">
                       <div class="time-range">
-                        <span class="time">${flight.departure} - ${flight.arrival}</span>
+                        <span class="time">${flight.departure} - ${
+        flight.arrival
+      }</span>
                       </div>
                       <span class="airline-name">${flight.airline}</span>
                     </div>
@@ -105,7 +105,7 @@ class FlightRenderer {
               </div>
             </div>
             <div class="flight-actions">
-              <button id="delete-btn" class="delete-button">
+              <button id="delete-btn" class="delete-button ${flight.id}">
               <img src="assets/delete.png" alt="delete">
               </button>
             </div>
@@ -147,4 +147,33 @@ document.querySelectorAll("#price-amount").forEach((el) => {
   console.log(total);
 });
 total_price.innerHTML = `${total}$`;
-console.log(`ы${total_price.innerHTML}`);
+
+function deleteCart(cartId) {
+  fetch(`http://localhost:3000/Cart/${cartId}`)
+    .then((response) => {
+      if (!response.ok) throw new Error("Failed to load flights");
+      return response.json();
+    })
+    .then(() => {
+      if (window.confirm(`Confirm deleting cart with id: ${cartId}`)) {
+        const deleteCart = fetch(`http://localhost:3000/Cart/${cartId}`, {
+          method: "DELETE",
+          headers: { "Content-Type": "application/json" },
+        });
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
+
+setTimeout(() => {
+  const buttons = document.querySelectorAll(".delete-button");
+  //const buttons = document.getElementById("delete-btn");
+  console.log(buttons);
+  buttons.forEach((el) => {
+    el.addEventListener("click", (e) => {
+      deleteCart(el.classList[1]);
+    });
+  });
+}, 1000);

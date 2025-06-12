@@ -404,7 +404,6 @@ function deleteFlight(flightId) {
 
 setTimeout(() => {
   const buttons = document.querySelectorAll(".delete-button");
-  //const buttons = document.getElementById("delete-btn");
   console.log(buttons);
   buttons.forEach((el) => {
     el.addEventListener("click", (e) => {

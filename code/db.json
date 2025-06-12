@@ -485,20 +485,6 @@
   ],
   "Cart": [
     {
-      "id": "4e3f",
-      "airline": "Airbus",
-      "rating": 4.6,
-      "reviews": "Very Good 86 reviews",
-      "price": 10,
-      "departure": "01:00 pm",
-      "arrival": "01:00 am",
-      "type": "non stop",
-      "duration": "12h 0m",
-      "route": "BYN-BYN",
-      "flightId": "b16b",
-      "userName": "admin1"
-    },
-    {
       "id": "8cbf",
       "airline": "Fly Dubai",
       "rating": 2.7,
